@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+IS:wght@100..400&display=swap');
+
+/*************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL/DEFAULT STYLES
+ * 2. HEADER
+ * 3. MAIN CONTENT
+ * -- 3a. Playlist
+ * 4. FOOTER
+ * 5. MEDIA QUERIES
+ *************************************************************/
+
+/* 1. GENERAL/DEFAULT STYLES */
+
+:root {
+    --primary-color: #BEADFA;
+    --accent-color: #000;
+    --secondary-color: #291C3A;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 20px/normal "Josefin Sans", sans-serif;
+    margin: 0;
+    background-color: #E1EBED;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+ol, ul, li, p {
+    margin: 0;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    transition: all ease-in 0.2s;
+}
+
+button:focus {
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+button:hover {
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #E1EBED;
+}
+
+/* 2. HEADER */
+#header {
+    background-color: var(--primary-color);
+}
+
+#header .navbar-brand {
+    font: 50px/normal "Playwrite IS", cursive;
+    color: var(--accent-color);
+    font-weight: 700;
+    padding-left: 50px;
+}
+
+#header .navbar-brand img {
+    width: 100px;
+}
+
+/* 3. MAIN CONTENT */
+#main {
+    flex: 1;
+}
+
+#main-content #mood-form {
+    height: 400px;
+}
+
+#mood-input {
+    max-height: 200px;
+}
+
+#mood-form .submit-btn {
+    font-size: 50px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -- 3a. Playlist */
+.back-btn {
+    background-color: var(--secondary-color);
+    color: #E1EBED;
+}
+.back-btn:hover {
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.spotify-frame {
+    width: 80%;
+    height: 400px;
+}
+
+/* 4. FOOTER */
+
+#footer {
+    background-color: var(--primary-color);
+    padding: 1em;
+}
+
+/* 5. MEDIA QUERIES */
+
+@media screen and (max-width:768px) {
+    body {
+        font-size: 18px;
+    }
+
+    #header .navbar-brand {
+        font-size: 40px;
+        padding-left: 30px;
+    }
+
+    #header .navbar-brand img {
+        width: 80px;
+    }
+
+    #mood-form .submit-btn {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    body {
+        font-size: 16px;
+    }
+
+    #header .navbar-brand {
+        font-size: 35px;
+        padding-left: 00px;
+    }
+
+
+    #header .navbar-brand img {
+        width: 70px;
+    }
+}
