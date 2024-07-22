@@ -130,7 +130,7 @@ ol, ul, li, p {
     }
 
     #main-content {
-        background-size: contain;
+        background-position: center;
     }
 
     #mood-form form {
